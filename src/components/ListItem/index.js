@@ -1,11 +1,10 @@
 import React from 'react'
 
-function ListItem() {
+function ListItem({ text, onDelete, index }) {
   return (
-    <>
-      <li></li>
-      <button>Delete</button>
-    </>
+    <li>{text}<button onClick={function () { onDelete(index) }}>Delete</button></li>
+
+
   )
 }
 
