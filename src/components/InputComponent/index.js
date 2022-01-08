@@ -1,6 +1,6 @@
 import { useState } from 'react'
 
-function Input() {
+function Input({ onAdd }) {
   const [text, setText] = useState('')
 
   function handleChange(event) {
@@ -10,7 +10,7 @@ function Input() {
   return (
     <div>
       <input type='text' onChange={handleChange} value={text} />
-      <button>Add</button>
+      <button onClick={onAdd}>Add</button>
     </div>
   )
 }
