@@ -2,6 +2,7 @@ import { useState } from 'react';
 import './App.css';
 import Input from '../InputComponent'
 import Header from '../Header'
+import List from '../List'
 
 function App() {
   const [todo, setTodo] = useState([])
@@ -15,6 +16,7 @@ function App() {
     <div className="App">
       <Header />
       <Input onAdd={addTodo} />
+      <List />
     </div>
   );
 }
