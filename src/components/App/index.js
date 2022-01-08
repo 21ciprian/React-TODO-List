@@ -8,6 +8,9 @@ function App() {
   function addTodo(item) {
     setTodo([...todo, item])
   }
+  function removeTodo(index) {
+    setTodo([...todo.slice(0, index), ...todo.slice(index + 1)])
+  }
   return (
     <div className="App">
       <Header />
