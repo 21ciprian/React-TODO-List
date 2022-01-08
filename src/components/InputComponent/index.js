@@ -10,7 +10,7 @@ function Input({ onAdd }) {
   return (
     <div>
       <input type='text' onChange={handleChange} value={text} />
-      <button onClick={onAdd}>Add</button>
+      <button onClick={function () { onAdd(text) }}>Add</button>
     </div>
   )
 }

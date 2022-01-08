@@ -8,7 +8,6 @@ function App() {
   const [todo, setTodo] = useState([])
   function addTodo(item) {
     setTodo([...todo, item])
-    console.log('clicked add')
   }
   function removeTodo(index) {
     setTodo([...todo.slice(0, index), ...todo.slice(index + 1)])
@@ -17,7 +16,7 @@ function App() {
     <div className="App">
       <Header />
       <Input onAdd={addTodo} />
-      <List onDelete={removeTodo} />
+      <List onDelete={removeTodo} tasks={todo} />
     </div>
   );
 }
