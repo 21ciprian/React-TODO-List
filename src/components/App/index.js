@@ -16,7 +16,7 @@ function App() {
     <div className="App">
       <Header />
       <Input onAdd={addTodo} />
-      <List />
+      <List onAdd={removeTodo} />
     </div>
   );
 }
